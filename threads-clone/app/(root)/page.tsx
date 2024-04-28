@@ -1,8 +1,9 @@
+import { UserButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
-  <main>
-    Threads Clone
-  </main>
-  );
+    <div className=" head-text text-left">
+      HOME
+    </div>
+  )
 }
