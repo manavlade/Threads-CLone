@@ -6,6 +6,7 @@ import Topbar from "@/Components/shared/Topbar";
 import LeftSidebar from "@/Components/shared/LeftSidebar";
 import RightSidebar from "@/Components/shared/RightSidebar";
 import Bottombar from "@/Components/shared/Bottombar";
+import { dark } from "@clerk/themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,17 +21,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+    >
       <html lang="en">
         <body className={inter.className}>
 
           <Topbar />
 
-          <main>
+          <main >
             <LeftSidebar />
 
             <section className=" main-container" >
-              <div className=" w-full max-w-4xl" >
+              <div className=" w-full max-w-4xll" >
                 {children}
               </div>
             </section>

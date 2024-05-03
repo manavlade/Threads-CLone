@@ -1,9 +1,16 @@
-import { UserButton } from "@clerk/nextjs";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 export default function Home() {
   return (
-    <div className=" head-text text-left">
-      HOME PAGE 
-    </div>
+  <>
+      <SignedIn>
+        <div className=" head-text text-left">
+          HOME PAGE
+        </div>
+      </SignedIn>
+      <SignedOut>
+        <SignInButton />
+      </SignedOut>
+  </>
   )
 }
